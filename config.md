@@ -45,20 +45,24 @@ Each record in this array must have configuration in [runtime config](runtime-co
 *Example*
 
 ```json
-"mounts": {
-    "name": "proc",
-    "path": "/proc",
-}
-```
-In `runtime.json`:
-```json
-"mounts": {
-    "proc": {
-        "type": "proc",
-        "source": "proc",
-        "options": []
-    }
-}
+"mounts": [
+    {
+        "name": "proc",
+        "path": "/proc",
+    },
+    {
+        "name": "dev",
+        "path": "/dev",
+    },
+    {
+        "name": "devpts",
+        "path": "/dev/pts",
+    },
+    {
+        "name": "data",
+        "path": "/data",
+    },
+]
 ```
 
 ## Process configuration
